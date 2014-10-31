@@ -8,3 +8,5 @@ docker pull ipedrazas/elasticsearch
 docker pull poklet/cassandra
 docker pull python:2
 docker pull python:3
+docker pull nornagon/postgres
+docker pull clue/ttrss
