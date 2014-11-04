@@ -1,0 +1,22 @@
+alias d="docker"
+alias ds="docker stop"
+alias dps="docker ps"
+alias drm="docker rm"
+
+
+
+# Stop all docker containers
+function dsall(){
+    docker stop $(docker ps -a -q)
+}
+
+# return IPs of Docker containers
+function dips(){
+    docker ps -q | xargs -n 1 docker inspect --format '{{ .NetworkSettings.IPAddress }} {{ .Name }}' | sed 's/ \// /'
+}
+
+# Cleanup old images
+function docker_purge(){
+    docker ps -a | grep 'months ago' | awk '{print $1}' | xargs --no-run-if-empty docker rm
+    docker images | grep '<none>' | awk '{print $3}' | xargs --no-run-if-empty docker rmi
+}
