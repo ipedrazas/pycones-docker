@@ -11,5 +11,11 @@ This command, as expected, just prints a `Hello World`, this other instead...
 does the same every 2 seconds
 
 
+Docker Options
+
+-it: runs the container in foreground
+-d: daemon, you run the container as a service
+
+
 
 [Go Back](../README.md)

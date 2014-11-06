@@ -2,8 +2,21 @@
 
 ## Flask Simple
 
+### Dockerfile
 
-First we build the image
+A dockerfile is a text file that contains instructions to create an image.
+
+Things you can put in a Dockerfile:
+
+* FROM base image we use to build our own image
+* RUN Shell commands
+	* apt-get update | install | ...
+	* mkdir -p
+	* chmod/chown ...
+* ADD folders, files and tar files
+* CMD instruction the container will run when it's started
+
+Using the Dockerfile we have in this folder, let's build our image
 
     docker build -t pycones/flasksimple .
 

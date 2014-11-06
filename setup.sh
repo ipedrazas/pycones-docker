@@ -11,7 +11,7 @@ sudo apt-get install lxc-docker
 sudo groupadd docker
 sudo gpasswd -a ${USER} docker
 sudo service docker restart
-
+# log out after this change
 
 # pull some images
 docker pull ubuntu

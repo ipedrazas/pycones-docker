@@ -8,3 +8,5 @@ If you are interested on following the workshop with your computer, you will nee
 
 To do so, you can execute the [setup.sh]() script
 
+There's another file [dockersh.rc]() that containes a few aliases and functions to make easier working with docker
+

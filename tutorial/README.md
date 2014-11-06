@@ -13,6 +13,7 @@
   * Docker for developers
   * Dockerfile
   * docker build
+  * image tagging
   * volumes
 * [Run, run, run](runrunrun/README.md)
   * Docker for end users
