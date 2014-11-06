@@ -16,8 +16,8 @@ sudo service docker restart
 # pull some images
 docker pull ubuntu
 docker pull tpires/neo4j
-docker pull dockerfile/redis
-docker pull dockerfile/mongodb
+docker pull redis
+docker pull mongodb
 docker pull postgres
 docker pull ipedrazas/elasticsearch
 docker pull poklet/cassandra
