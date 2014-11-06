@@ -15,8 +15,9 @@ function dips(){
     docker ps -q | xargs -n 1 docker inspect --format '{{ .NetworkSettings.IPAddress }} {{ .Name }}' | sed 's/ \// /'
 }
 
-# Cleanup old images
+# Cleanup old containers and images
 function docker_purge(){
+    docker ps -a | grep 'weeks ago' | awk '{print $1}' | xargs --no-run-if-empty docker rm
     docker ps -a | grep 'months ago' | awk '{print $1}' | xargs --no-run-if-empty docker rm
     docker images | grep '<none>' | awk '{print $3}' | xargs --no-run-if-empty docker rmi
 }
