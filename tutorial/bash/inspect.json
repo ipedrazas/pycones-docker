@@ -1,0 +1,93 @@
+[{
+    "Args": [],
+    "Config": {
+        "AttachStderr": true,
+        "AttachStdin": true,
+        "AttachStdout": true,
+        "Cmd": [
+            "bash"
+        ],
+        "CpuShares": 0,
+        "Cpuset": "",
+        "Domainname": "",
+        "Entrypoint": null,
+        "Env": [
+            "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+        ],
+        "ExposedPorts": null,
+        "Hostname": "f42352d5420d",
+        "Image": "ubuntu",
+        "Memory": 0,
+        "MemorySwap": 0,
+        "NetworkDisabled": false,
+        "OnBuild": null,
+        "OpenStdin": true,
+        "PortSpecs": null,
+        "SecurityOpt": null,
+        "StdinOnce": true,
+        "Tty": true,
+        "User": "",
+        "Volumes": null,
+        "WorkingDir": ""
+    },
+    "Created": "2014-11-07T16:25:55.580401729Z",
+    "Driver": "aufs",
+    "ExecDriver": "native-0.2",
+    "HostConfig": {
+        "Binds": [
+            "/data/lab/volume_test:/data"
+        ],
+        "CapAdd": null,
+        "CapDrop": null,
+        "ContainerIDFile": "",
+        "Devices": [],
+        "Dns": null,
+        "DnsSearch": null,
+        "ExtraHosts": null,
+        "Links": null,
+        "LxcConf": [],
+        "NetworkMode": "bridge",
+        "PortBindings": {},
+        "Privileged": false,
+        "PublishAllPorts": false,
+        "RestartPolicy": {
+            "MaximumRetryCount": 0,
+            "Name": ""
+        },
+        "VolumesFrom": null
+    },
+    "HostnamePath": "/var/lib/docker/containers/f42352d5420d0af23397be4526eed15aeaa8e2cfb3c5777b54b70ea3c2042fd2/hostname",
+    "HostsPath": "/var/lib/docker/containers/f42352d5420d0af23397be4526eed15aeaa8e2cfb3c5777b54b70ea3c2042fd2/hosts",
+    "Id": "f42352d5420d0af23397be4526eed15aeaa8e2cfb3c5777b54b70ea3c2042fd2",
+    "Image": "5506de2b643be1e6febbf3b8a240760c6843244c41e12aa2f60ccbb7153d17f5",
+    "MountLabel": "",
+    "Name": "/jovial_ritchie",
+    "NetworkSettings": {
+        "Bridge": "docker0",
+        "Gateway": "172.17.42.1",
+        "IPAddress": "172.17.0.15",
+        "IPPrefixLen": 16,
+        "MacAddress": "02:42:ac:11:00:0f",
+        "PortMapping": null,
+        "Ports": {}
+    },
+    "Path": "bash",
+    "ProcessLabel": "",
+    "ResolvConfPath": "/var/lib/docker/containers/f42352d5420d0af23397be4526eed15aeaa8e2cfb3c5777b54b70ea3c2042fd2/resolv.conf",
+    "State": {
+        "ExitCode": 0,
+        "FinishedAt": "0001-01-01T00:00:00Z",
+        "Paused": false,
+        "Pid": 7380,
+        "Restarting": false,
+        "Running": true,
+        "StartedAt": "2014-11-07T16:25:55.695264049Z"
+    },
+    "Volumes": {
+        "/data": "/data/lab/volume_test"
+    },
+    "VolumesRW": {
+        "/data": true
+    }
+}
+]

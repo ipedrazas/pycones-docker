@@ -14,14 +14,33 @@ Things you can put in a Dockerfile:
 	* mkdir -p
 	* chmod/chown ...
 * ADD folders, files and tar files
+* EXPOSE ports. For security reasons does not open the ports. We have to specify it when we run the container.
+* VOLUME to mount volumes
 * CMD instruction the container will run when it's started
 
-Using the Dockerfile we have in this folder, let's build our image
+
+For example, if we would want to create a container with a nginx we could do something like:
+
+	FROM ubuntu:latest
+	RUN apt-get update -y
+	RUN apt-get install -y nginx
+	RUN echo "Hello pycones, this is a very basic container" > /usr/share/nginx/html/index.html
+	EXPOSE 80
+
+Using the Dockerfile we have in this folder, let's build our own image that will run a Flask app
 
     docker build -t pycones/flasksimple .
 
 
 Then we run it
+
+	docker run -it --rm pycones/flasksimple
+
+It does not work. Why?
+
+	docker run -it --rm -p 5000 pycones/flasksimple
+
+But we can re-map ports:
 
     docker run -it --rm -p 5002:5000 pycones/flasksimple
 
