@@ -13,6 +13,12 @@ sudo gpasswd -a ${USER} docker
 sudo service docker restart
 # log out after this change
 
+# Upgrade
+sudo apt-get purge lxc-docker
+sudo apt-get autoremove --purge 
+sudo apt-get install lxc-docker
+
+
 # pull some images
 docker pull ubuntu
 docker pull tpires/neo4j
