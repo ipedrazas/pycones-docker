@@ -45,7 +45,7 @@ But we can re-map ports:
     docker run -it --rm -p 5002:5000 pycones/flasksimple
 
 
-Finally, we test it [http://localhost:5200](http://localhost:5200). The application is listening in port 5000 but we re-map that in our host to 5002. Why? because if you have 3 apps all of them listening the same port it will not work, and we do not want to modify how the app works or it's configured, just how we access it.
+Finally, we test it [http://localhost:5002](http://localhost:5002). The application is listening in port 5000 but we re-map that in our host to 5002. Why? because if you have 3 apps all of them listening the same port it will not work, and we do not want to modify how the app works or it's configured, just how we access it.
 
 If you modify the file app.py you will see that nothing happens. This is because the app is inside the image, so all the changes after building the image will not be there.
 
