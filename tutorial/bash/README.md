@@ -20,6 +20,8 @@ It is safe to play bash inside a container... in fact, it doesn't really matter 
 
 ## Restart flag
 
+In my experience, restarting containers don't work well, use it at your own risk and suffering.
+
 If your container has stopped because of a failure you can configure docker to restart it using the `--restart` flag.
 
 The flag will check the return code and it will make a decission whether or not to restart it. By default, containers are not restarted.
